@@ -1,0 +1,111 @@
+/* Allgemeine Stile für den gesamten Körper der Website */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container für die Hauptinhalte und die Sidebar */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar-Stile */
+.sidebar {
+    flex: 0 0 250px; /* Sidebar ist 250px breit und wird nicht vergrößert oder verkleinert */
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul ul {
+    margin-left: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+/* Hauptinhalt-Stile */
+main {
+    flex: 1; /* Hauptinhalt nimmt den verfügbaren Platz ein */
+    padding: 20px;
+}
+
+main header {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+main h1, main h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+main p {
+    margin-bottom: 15px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Stile für die rechte Sidebar (Aside) */
+aside {
+    flex: 0 0 250px;
+    padding: 20px;
+}
+
+aside h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+aside a:hover {
+    background-color: #f4f4f4;
+}
+
+

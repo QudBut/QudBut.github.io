@@ -1,0 +1,238 @@
+/* Allgemeine Stile für den gesamten Körper der Website */
+body {
+    font-family: Comic Sans MS, fantasy;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #9ad4db;
+    color: #448b83;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    gap: 20px; /* Abstand zwischen den Spalten */
+}
+
+/* Sidebar-Stile */
+.sidebar {
+    width: 20%;
+    background-color: #0b4455;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    font-size: 2rem; /* Größere Schriftgröße für Überschrift */
+    margin-bottom: 20px; /* Abstand unter der Überschrift */
+    color: #c6ece8;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px 10px; /* Größeres Padding für mehr Platz */
+    font-size: 1.2rem; /* Größere Schriftgröße */
+    text-decoration: none;
+    color: #91d3cd;
+    margin-bottom: 10px; /* Abstand zwischen den Links */
+    border-radius: 4px; /* Abgerundete Ecken */
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #1c6679;
+}
+
+.sidebar ul ul {
+    padding-left: 20px;
+}
+
+main {
+    width: 65%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 30px; /* Abrundung des Hauptinhalts */
+    margin-bottom: 250px; /* Abstand nach unten hinzufügen */
+}
+
+/* Spezifische Anpassung für den Fahrradtypen-Abschnitt */
+#fahrradtypen-section {
+    margin-bottom: 60px; /* Mehr Abstand nach unten */
+}
+
+header {
+    background-color: #0f4a52;
+    color: rgb(153, 209, 204);
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+aside {
+    width: 15%;
+    background-color: #266872;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #c6ece8; /* Textfarbe für die Quellen */
+    position: relative; /* Positionieren relativ zum Container */
+}
+
+aside h2 {
+    font-size: 1.8rem; /* Größere Schriftgröße für Überschrift */
+    margin-bottom: 20px; /* Abstand unter der Überschrift */
+    border-bottom: 2px solid #c6ece8; /* Unterstreichung der Überschrift */
+    padding-bottom: 10px;
+}
+
+aside ul {
+    list-style-type: none; /* Entfernen der Standard-Aufzählungszeichen */
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 15px; /* Abstand zwischen den Listenelementen */
+}
+
+aside a {
+    display: block;
+    color: #c6ece8; /* Textfarbe für die Links */
+    font-size: 1.1rem; /* Größere Schriftgröße */
+    text-decoration: none; /* Entfernen der Unterstreichung */
+    padding: 10px;
+    border-radius: 4px; /* Abgerundete Ecken */
+    transition: background-color 0.3s;
+}
+
+aside a:hover {
+    background-color: #3a8a91; /* Hintergrundfarbe bei Hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar, main {
+        width: 100%;
+        padding: 10px; /* Weniger Padding für mobile Geräte */
+    }
+    aside {
+        width: 100%; /* Volle Breite für mobile Geräte */
+        padding: 10px; /* Weniger Padding für mobile Geräte */
+        position: fixed; /* Fixiert am unteren Rand */
+        bottom: 0; /* Position am unteren Rand */
+        left: 0;
+        border-radius: 0; /* Keine Abrundung für mobile Ansicht */
+    }
+    aside h2 {
+        font-size: 1.5rem; /* Kleinere Schriftgröße für mobile Geräte */
+    }
+    aside a {
+        font-size: 1rem; /* Kleinere Schriftgröße für mobile Geräte */
+        padding: 8px; /* Weniger Padding für Links */
+    }
+}
+
+/* Dropdown-Menü-Stile */
+.dropdown-content {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.dropdown-content li {
+    position: relative;
+}
+
+.dropdown-content li:before {
+    content: "▶";
+    position: absolute;
+    left: -15px;
+    top: 0;
+    font-size: 0.8rem;
+    transform: rotate(90deg);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Fotogalerie-Stile */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 10px);
+    box-shadow: 0 2px 5px rgb(31, 97, 134);
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox-Stile */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(124, 135, 138, 0.8);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #1c7777;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.lightbox .close:hover,
+.lightbox .close:focus {
+    color: #3b6f80;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Abstand zwischen Header und Fotogalerie */
+main header {
+    margin-bottom: 40px;
+}
+
+.gallery {
+    margin-top: 20px;
+}
